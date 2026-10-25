@@ -17,18 +17,19 @@ The design demonstrates how combinational logic gates operate on binary inputs a
 
 ## 🔧 Logic Gates Implemented
 
-The following eight logic gate operations are implemented:
+The following eight logic gates are implemented in a single Verilog module using continuous assignments.
 
-| Logic Gate | Verilog Operator | Function |
+| Logic Gate | Verilog Expression | Function |
 |---|---|---|
-| OR | `|` | Output is HIGH when at least one input is HIGH. |
-| AND | `&` | Output is HIGH when both inputs are HIGH. |
-| NOT | `~` | Inverts input A. |
-| NAND | `~&` equivalent: `~(a & b)` | Inverts the AND output. |
-| NOR | `~|` equivalent: `~(a | b)` | Inverts the OR output. |
-| Buffer (BUF) | Direct assignment | Output follows input B. |
-| XOR | `^` | Output is HIGH when the inputs are different. |
-| XNOR | `~^` equivalent: `~(a ^ b)` | Output is HIGH when the inputs are the same. |
+| OR | `a OR b` | Output is HIGH when at least one input is HIGH. |
+| AND | `a & b` | Output is HIGH when both inputs are HIGH. |
+| NOT | `~a` | Inverts input A. |
+| NAND | `~(a & b)` | Output is LOW only when both inputs are HIGH. |
+| NOR | `~ (a OR b)` | Output is HIGH only when both inputs are LOW. |
+| Buffer (BUF) | `b` | Output follows input B. |
+| XOR | `a ^ b` | Output is HIGH when the inputs are different. |
+| XNOR | `~(a ^ b)` | Output is HIGH when the inputs are the same. |
+
 
 ## 🧩 Design Details
 
