@@ -21,11 +21,11 @@ The following eight logic gates are implemented in a single Verilog module using
 
 | Logic Gate | Verilog Expression | Function |
 |---|---|---|
-| OR | `a OR b` | Output is HIGH when at least one input is HIGH. |
+| OR | `a | b` | Output is HIGH when at least one input is HIGH. |
 | AND | `a & b` | Output is HIGH when both inputs are HIGH. |
 | NOT | `~a` | Inverts input A. |
 | NAND | `~(a & b)` | Output is LOW only when both inputs are HIGH. |
-| NOR | `~ (a OR b)` | Output is HIGH only when both inputs are LOW. |
+| NOR | `~ (a | b)` | Output is HIGH only when both inputs are LOW. |
 | Buffer (BUF) | `b` | Output follows input B. |
 | XOR | `a ^ b` | Output is HIGH when the inputs are different. |
 | XNOR | `~(a ^ b)` | Output is HIGH when the inputs are the same. |
